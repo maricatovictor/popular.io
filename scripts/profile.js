@@ -76,6 +76,7 @@ function updateUserProfile(){
         'imgURL': updateString(imageUrlPlaceholder),
         "hobbies": updateString(hobbiesPlaceholder)
     });
+    window.location.reload();
 }
 
 function updateString(input){
