@@ -26,7 +26,7 @@ function getHTMLElements(){
 async function readUserProfile(){
     await getHTMLElements();
 
-    username='brenerbarros';
+    username=localStorage.getItem('username');
 
     var query = ref.orderByChild('user').equalTo(username);
 

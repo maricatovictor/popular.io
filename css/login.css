@@ -5,12 +5,13 @@ body{
 }
 
 .login__modal{
-    width: calc(100% - 20px);
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
     background-color: #fff;
-    border-radius: 20px;
-    margin: 0 auto;
-    margin-top: var(--b-ex);
-    padding: var(--b-ex);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .login__modal .login__container{
@@ -20,7 +21,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
 
@@ -87,7 +88,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     height: 100%;
 }
 
@@ -99,18 +100,34 @@ body{
     margin-bottom: var(--b-ex);
 }
 
-.login__modal .register__container .login__input{
-    margin-bottom: var(--b-ex);
-}
-
 .login__modal .register__container .login__input#username{
     margin-bottom: var(--b-sm);
+}
+
+.login__modal .register__container .login__input#password{
+    margin-bottom: var(--b-md);
+}
+
+.login__modal .register__container .user__validate{
+    display: none;
+    margin-bottom: var(--b-md);
+    color: red;
+    font-family: var(--base);
+    font-size: var(--s-ms);
+}
+
+.login__modal .register__container .button{
+    margin-bottom: var(--b-ms);
 }
 
 @media screen and (min-width: 768px){
     .login__modal{
         width: 350px;
         height: 400px;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-top: var(--b-ex);
+        padding: var(--b-ex);
     }
 
     .login__modal .login__container .title{

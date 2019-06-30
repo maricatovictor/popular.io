@@ -4,14 +4,14 @@
 /* Variáveis principais */
 :root{
     /* colors */
-    --c-primary: #ff4848;
-    --c-secundary: #e9aa43;
+    --c-primary: #0415f856;
+    --c-secundary: #7300df;
     --c-background: #ccc;
 
     /* font colors */
     --f-primary: #424242;
     --f-link: #9b9b9b;
-    --f-custom: #4b20ad;
+    --f-custom: #000f97;
 
     /* font size */
     --s-sm: 12px;
@@ -41,7 +41,7 @@
 
 .logo:before{
     content: "Popular.io";
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Paytone One', sans-serif;
     color: var(--f-custom);
     font-size: 40px;
     /* text-transform: uppercase; */
@@ -65,4 +65,8 @@
     text-align: center;
     text-decoration: none;
     margin-top: 5%;
+}
+
+.link, .button:hover{
+    cursor: pointer;
 }

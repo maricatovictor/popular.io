@@ -6,8 +6,9 @@
     <title>Popular.io</title>
 
     <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-    <script src="Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="Scripts/register.js" type="text/javascript"></script>
+    <script src="scripts/login.js" type="text/javascript"></script>
 
     <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
@@ -19,20 +20,22 @@
                 <span>Vamos começar!</span>
             </h3>
             <p class="description">Digite seu nome de usuário e senha para se conectar.</p>
-            <input type="text" class="login__input" placeholder="Usuário" id="userid">
-            <input type="password" class="login__input" placeholder="Senha" id="password">
-            <a class="link" href="#">Ainda não tem conta? Registre-se</a>
-            <a class="button" href="#">Continuar</a>
+            <input type="text" class="login__input" placeholder="Nome de usuário" id="user">
+            <input type="password" class="login__input" placeholder="Senha" id="pass">
+            <a class="link" href="#" onclick="toggleRegister()">Ainda não tem conta? Registre-se</a>
+            <a class="button" href="profile.html" onclick="tryLogin()">Continuar</a>
         </div>
         <div class="register__container">
             <span class="logo"></span>
             <h3 class="title">
                 <span>Quase lá...</span>
             </h3>
-            <p class="description">Neste momento, você só precisa cadastrar seu nome de usuário. Mas fica tranquilo! Mais tarde você poderá editar seu perfil.</p>
+            <p class="description">Cadastre um nome de usuário e uma senha para a sua conta.</p>
             <input type="text" class="login__input" placeholder="Nome de usuário" id="username">
             <input type="password" class="login__input" placeholder="Senha" id="password">
-            <a class="button" href="#" onclick="registerUser()">Registrar</a>
+            <span class="user__validate">O nome de usuário já existe</span>
+            <a class="button" href="#" onclick="validateUser()">Registrar</a>
+            <a class="link" href="#" onclick="toggleRegister()">Voltar</a>
         </div>
     </div>
 </body>
