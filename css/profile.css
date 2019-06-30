@@ -1,0 +1,128 @@
+@import url(global.css);
+
+body{
+    background-color: var(--c-background);
+}
+
+.profile__modal{
+    width: calc(100% - 0px);
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: var(--b-ex);
+    padding: var(--b-ex);
+}
+
+.profile__modal .profile__container{
+    position: relative;
+    /* display: none; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    font-family: var(--base);
+    font-size: var(--s-mg);
+    color: var(--f-primary);
+    text-transform: uppercase;
+    font-style: none;
+    font-weight: 800;
+}
+
+.profile__modal .profile__container .title{
+    margin: var(--b-lg) 0 var(--b-ex);
+}
+
+.description{
+    font-family: var(--base);
+    font-size: var(--s-ms);
+    color: var(--f-link);
+    text-align: center;
+}
+
+.profile__modal .profile__container .description{
+    margin-bottom: var(--b-ex);
+}
+
+.profile__input{
+    background-color: #f5f7fa;
+    padding: var(--b-md);
+    border-radius: 4px;
+    letter-spacing: .05em;
+    border-style: none;
+    width: 100%;
+
+    font-size: var(--s-ms);
+    font-family: var(--base);
+    color: var(--f-primary);
+}
+
+.profile__input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.profile__modal .profile__container .profile__input{
+    margin-bottom: var(--b-lg);
+}
+
+.profile__input::placeholder{
+    color: lightgray;
+}
+
+.profile__modal .profile__container .link{
+    align-self: flex-end;
+    margin-bottom: var(--b-ex);
+}
+
+.profileImage {
+    width: 30%;
+    height: 20%;
+    margin-bottom: 5%;
+}
+
+@media screen and (min-width: 768px){
+    .profile__modal{
+        width: 350px;
+        height: 600px;
+    }
+
+    .profile__modal .profile__container .title{
+        font-size: var(--s-lg);
+        margin: var(--b-lg) 0 var(--b-ex);
+    }
+
+    .profile__modal .profile__container .description{
+        font-size: var(--s-md);
+        margin-bottom: var(--b-el);
+    }
+
+    .profile__input{
+        padding: var(--b-ms);
+        border-radius: 4px;
+        font-size: var(--s-md);
+    }
+
+    .profile__modal .profile__container .profile__input{
+        margin-bottom: var(--b-ms);
+    }
+
+    .profile__modal .profile__container .link{
+        margin-bottom: var(--b-el);
+    }
+
+    .profile__modal .register__container .title{
+        font-size: var(--s-lg);
+        margin: var(--b-lg) 0 var(--b-el);
+    }
+
+    .profile__modal .register__container .description{
+        font-size: var(--s-md);
+        margin-bottom: var(--b-el);
+    }
+}   

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Paytone+One&display=swap');
+
+/* Variáveis principais */
+:root{
+    /* colors */
+    --c-primary: #ff4848;
+    --c-secundary: #e9aa43;
+    --c-background: #ccc;
+
+    /* font colors */
+    --f-primary: #424242;
+    --f-link: #9b9b9b;
+    --f-custom: #4b20ad;
+
+    /* font size */
+    --s-sm: 12px;
+    --s-ms: 16px;
+    --s-md: 18px;
+    --s-mg: 22px;
+    --s-lg: 26px;
+    --s-ex: 30px;
+
+    /* breakpoint */
+    --b-sm: 5px;
+    --b-ms: 10px;
+    --b-md: 15px;
+    --b-lg: 20px;
+    --b-el: 30px;
+    --b-ex: 50px;
+
+    /* font family */
+    --title: 'Arial';
+    --base: 'Roboto', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.logo:before{
+    content: "Popular.io";
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: var(--f-custom);
+    font-size: 40px;
+    /* text-transform: uppercase; */
+}
+
+.link{
+    font-size: var(--s-ms);
+    color: var(--f-custom);
+    text-decoration: underline;
+}
+
+.button{
+    color: #fff;
+    font-family: var(--base);
+    font-size: var(--s-ms);
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: var(--b-ms) var(--b-md);
+    background: linear-gradient(to right, var(--c-primary), var(--c-secundary));
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 5%;
+}

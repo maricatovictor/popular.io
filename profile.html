@@ -1,0 +1,34 @@
+<html lang='pt'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+        
+        <title>Perfil</title>
+        
+        <link rel="stylesheet" type='text/css' href="css/profile.css">
+
+        <script src='scripts/profile.js'></script>
+    </head>
+    
+    <body onload="readUserProfile()">
+
+        <div class="profile__modal">
+            <div class="profile__container">
+                <span class="logo"></span>
+                <h3 class="title">
+                    <span id='helloUser'>Olá!</span>
+                </h3>
+                <p class="description">Aqui, você pode editar suas informações:</p>
+                <img class='profileImage' id='profileImage'>
+                <input type="text" class="profile__input" placeholder="URL da Imagem" id="userImageURL">
+                <input type="text" class="profile__input" placeholder="Seu nome" id="userProfileName">
+                <input type="text" class="profile__input" placeholder="Idade" id="userAge">
+                <input type="text" class="profile__input" placeholder="Hobbies" id="userHobbies">
+                <a class="button" href="#" onclick="updateUserProfile()">Salvar</a>
+            </div>
+        </div>
+    </body>
+</html>
