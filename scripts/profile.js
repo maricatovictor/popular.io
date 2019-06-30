@@ -22,7 +22,7 @@ function getHTMLElements(){
     hobbiesPlaceholder = document.getElementById('userHobbies');
     helloUser = document.getElementById('helloUser');
 }
-
+//merge test
 async function readUserProfile(){
     await getHTMLElements();
 
