@@ -14,8 +14,6 @@ var ref = myFirebase.child("users");
 
 function loadUsers(){
     getHTMLElements();
-
-
     personKey = generatePersonKey();
 }
 
@@ -29,31 +27,32 @@ function getHTMLElements(){
 }
 
 function votePerson1(){
-    key = 1
-    current_votes = getCurrentVotes(key) + 1;
-    writeCurrentVotes(key);
+    username = 'victoooor'
+    getCurrentVotes(username);
 }
 
 function votePerson2(){
-    key = 2
-    current_votes = getCurrentVotes(key) + 1;
-    writeCurrentVotes(key, current_votes);
+    username = 'bernardobarros'
+    getCurrentVotes(username);
 }
 
-async function getCurrentVotes(key){
+async function getCurrentVotes(username){
 
-    var query = ref.child('users').child(key);
+    var query = ref.orderByChild('user').equalTo(username);
 
     await query.once('value', data => {
         data.forEach(userSnapshot => {
-            let user = userSnapshot.val();
             let key = userSnapshot.key;
-            votes = user.qtdVotos;
-            return votes;
+            let votes = userSnapshot.val().qtdVotos;
+            updateVotes(votes, key)
         });
     });   
+
 }
 
-async function writeCurrentVotes(key, current_votes){
-
+async function updateVotes(votes, key){
+    votes = votes+1
+    ref.child(key).update({
+        'qtdVotos': votes,
+    });
 }
